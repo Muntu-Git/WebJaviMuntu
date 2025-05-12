@@ -26,10 +26,36 @@
         </nav>
     </header>
 
-    <!-- Secció d'Informació -->
-    <section class="about-us">
-        <h2>Cotxes</h2>
-        <p>Diferents cotxes</p>
-    </section>
+
+    <div id="car-details"></div>
+
+    <script>
+      // JSON local dels cotxes
+      const cotxes = ["./cotxes.json"];
+  
+      // 1. Llegeix el paràmetre id de la URL
+      const params = new URLSearchParams(window.location.search);
+      const id = parseInt(params.get("id"));
+  
+      // 2. Cerca el cotxe pel seu id
+      const cotxe = cotxes.find(c => c.id === 2);
+  
+      // 3. Si trobat, mostra les dades
+      const container = document.getElementById("car-details");
+  
+      if (cotxe) {
+        container.innerHTML = `
+          <div class="car-card">
+            <img src="${cotxe.imatge}" alt="${cotxe.nom} ${cotxe.model}" class="car-image" />
+            <h2 class="car-title">${cotxe.nom} ${cotxe.model}</h2>
+            <p class="car-description">${cotxe.descripcio}</p>
+            <p class="car-price">${cotxe.preu.toLocaleString()} €</p>
+            <a href="index.html"> Tornar al catàleg</a>
+          </div>
+        `;
+      } else {
+        container.innerHTML = "<p>Cotxe no trobat.</p>";
+      }
+    </script>
 
 </body>

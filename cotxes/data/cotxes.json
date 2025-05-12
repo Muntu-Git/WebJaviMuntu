@@ -5,7 +5,7 @@
         "model": "Mustang GT",
         "preu": 45000,
         "descripcio": "Esportiu icònic amb motor V8, perfecte per amants de la potència.",
-        "imatge": "https://example.com/images/ford_mustang.jpg"
+        "imatge": "./mustang-blanco"
     },
     {
         "id": 2,
