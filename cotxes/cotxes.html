@@ -30,32 +30,35 @@
     <div id="car-details"></div>
 
     <script>
-      // JSON local dels cotxes
-      const cotxes = ["/cotxes.json"];
-  
-      // 1. Llegeix el paràmetre id de la URL
+      // Llegeix l'id de la URL
       const params = new URLSearchParams(window.location.search);
       const id = parseInt(params.get("id"));
-  
-      // 2. Cerca el cotxe pel seu id
-      const cotxe = cotxes.find(c => c.id === 2);
-  
-      // 3. Si trobat, mostra les dades
-      const container = document.getElementById("car-details");
-  
-      if (cotxe) {
-        container.innerHTML = `
-          <div class="car-card">
-            <img src="${co-txe.imatge}" alt="${cotxe.nom} ${cotxe.model}" class="car-image" />
-            <h2 class="car-title">${cotxe.nom} ${cotxe.model}</h2>
-            <p class="car-description">${cotxe.descripcio}</p>
-            <p class="car-price">${cotxe.preu.toLocaleString()} €</p>
-            <a href="index.html"> Tornar al catàleg</a>
-          </div>
-        `;
-      } else {
-        container.innerHTML = "<p>Cotxe no trobat.</p>";
-      }
+    
+      // Carrega els cotxes des del JSON
+      fetch("/cotxes/data/cotxes.json")
+        .then(res => res.json())
+        .then(cotxes => {
+          const cotxe = cotxes.find(c => c.id === id);
+          const container = document.getElementById("car-details");
+    
+          if (cotxe) {
+            container.innerHTML = `
+              <div class="car-card shadow p-4 rounded-4 bg-white d-flex flex-column align-items-center">
+                <img src="${cotxe.imatge}" alt="${cotxe.nom} ${cotxe.model}" class="car-image mb-4" />
+                <h2 class="car-title">${cotxe.nom} ${cotxe.model}</h2>
+                <p class="car-description text-center">${cotxe.descripcio}</p>
+                <p class="car-price fs-4 fw-bold text-success">${cotxe.preu.toLocaleString()} €</p>
+                <a href="/cotxes/cotxes.html" class="btn btn-primary mt-3">Tornar al catàleg</a>
+              </div>
+            `;
+          } else {
+            container.innerHTML = "<p>Cotxe no trobat.</p>";
+          }
+        })
+        .catch(err => {
+          console.error("Error carregant JSON:", err);
+          document.getElementById("car-details").innerHTML = "<p>Error carregant les dades del cotxe.</p>";
+        });
     </script>
 
 </body>
