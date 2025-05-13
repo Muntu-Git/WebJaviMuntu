@@ -113,3 +113,20 @@ footer {
     background: linear-gradient(#47b4fd, #87c3ff);
 }
 
+#suggestions {
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+#suggestions a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#suggestions a:hover {
+    background-color: #f8f9fa;
+}

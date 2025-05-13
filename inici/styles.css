@@ -1,0 +1,10 @@
+.my-carousel-item {
+    max-height: 50vh;
+    overflow: hidden;
+}
+
+.my-carousel-image {
+    max-height: 100%;
+    align-self: center;
+    object-fit: contain; 
+}
