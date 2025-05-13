@@ -3,17 +3,29 @@ const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get("id"));
 
 // Carrega els cotxes des del JSON
-fetch("/cotxes/cotxesnous/data/cotxes.json")
+fetch("/cotxes/cotxes.json")
   .then(res => res.json())
   .then(cotxes => {
-    const cotxe = cotxes.find(c => c.id === id);
+    // Filtrar els cotxes que són nous (nou = true)
+    const cotxe = cotxes
+      .find(c => c.id === id);      // Busca el cotxe per id
+
     const container = document.getElementById("car-details");
+
+    let cotxeNou = "";
+
+    if(cotxes.nou){
+      cotxeNou = "Nou";
+    } else{
+      cotxeNou = "2a ma"
+    }
 
     if (cotxe) {
       container.innerHTML = `
         <div class="car-container">
           <div class="car-image-box">
             <img src="${cotxe.imatge}" alt="${cotxe.nom} ${cotxe.model}" class="car-image" />
+            
           </div>
           <div class="car-info-box">
             <div class="car-info-card">
@@ -21,13 +33,14 @@ fetch("/cotxes/cotxesnous/data/cotxes.json")
               <h3 class="car-model">${cotxe.model}</h3>
               <p class="car-preu">${cotxe.preu.toLocaleString()} €</p>
               <p class="car-description">${cotxe.descripcio}</p>
-              <a href="/cotxes/cotxes.html" class="btn btn-secondary mt-3">Tornar al catàleg</a>
+              <a href="/cotxes/cotxes2ma/cotxes.html" class="btn btn-secondary mt-3">Tornar al catàleg</a>
+              <h3 class="my-text-image">${cotxeNou}</h3>
             </div>
           </div>
         </div>
       `;
     } else {
-      container.innerHTML = "<p>Cotxe no trobat.</p>";
+      container.innerHTML = "<p>Cotxe no trobat o no és un cotxe de segona mà.</p>";
     }
   })
   .catch(err => {

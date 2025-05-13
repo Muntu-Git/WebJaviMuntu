@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let cotxes = [];
 
     // Carregar el JSON de cotxes
-    fetch("/cotxes/cotxesnous/data/cotxes.json")
+    fetch("/cotxes/cotxes.json")
         .then(res => res.json())
         .then(data => cotxes = data)
         .catch(err => console.error("Error carregant cotxes:", err));
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         resultats.forEach(cotxe => {
             const item = document.createElement("a");
-            item.href = `/cotxes/cotxes2ma/cotxes.html?id=${cotxe.id}`;
+            item.href = `/cotxes/cotxes.html?id=${cotxe.id}`;
             item.classList.add("list-group-item", "list-group-item-action", "d-flex", "align-items-center");
 
             item.innerHTML = `
