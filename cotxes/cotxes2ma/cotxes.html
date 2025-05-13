@@ -49,9 +49,39 @@
         </div>
       </nav>
 
-    <div>
-        <h1>Cotxes segona mà</h1>
-    </div>
+      <div id="car-details"></div>
+
+      <script>
+        // Llegeix l'id de la URL
+        const params = new URLSearchParams(window.location.search);
+        const id = parseInt(params.get("id"));
+      
+        // Carrega els cotxes des del JSON
+        fetch("/cotxes/cotxes2ma/data/cotxes2ma.json")
+          .then(res => res.json())
+          .then(cotxes => {
+            const cotxe = cotxes.find(c => c.id === id);
+            const container = document.getElementById("car-details");
+      
+            if (cotxe) {
+              container.innerHTML = `
+                <div">
+                  <img src="${cotxe.imatge}" alt="${cotxe.nom} ${cotxe.model}" class="car-image" />
+                  <h2 class="car-title">${cotxe.nom} ${cotxe.model}</h2>
+                  <p class="car-description">${cotxe.descripcio}</p>
+                  <p class="car-preu">${cotxe.preu.toLocaleString()} €</p>
+                  <a href="/cotxes/cotxes.html">Tornar al catàleg</a>
+                </div>
+              `;
+            } else {
+              container.innerHTML = "<p>Cotxe no trobat.</p>";
+            }
+          })
+          .catch(err => {
+            console.error("Error carregant JSON:", err);
+            document.getElementById("car-details").innerHTML = "<p>Error carregant les dades del cotxe.</p>";
+          });
+      </script>
 
     
     <!-- Peu de Pàgina -->
