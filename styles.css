@@ -108,3 +108,8 @@ footer {
 .logo-navbar{
     height: 50px;
 }
+
+.my-navbar{
+    background: linear-gradient(#47b4fd, #87c3ff);
+}
+
