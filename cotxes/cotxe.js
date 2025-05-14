@@ -6,7 +6,7 @@ const id = parseInt(params.get("id"));
 fetch("/cotxes/cotxes.json")
   .then(res => res.json())
   .then(cotxes => {
-    // Filtrar els cotxes que són nous (nou = true)
+   
     const cotxe = cotxes
       .find(c => c.id === id);      // Busca el cotxe per id
 
@@ -14,7 +14,7 @@ fetch("/cotxes/cotxes.json")
 
     let cotxeNou = "";
 
-    if(cotxes.nou){
+    if(cotxe.nou){
       cotxeNou = "Nou";
     } else{
       cotxeNou = "2a ma"
