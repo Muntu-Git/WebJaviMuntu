@@ -33,7 +33,7 @@ fetch("/cotxes/cotxes.json")
               <h3 class="car-model">${cotxe.model}</h3>
               <p class="car-preu">${cotxe.preu.toLocaleString()} €</p>
               <p class="car-description">${cotxe.descripcio}</p>
-              <a href="/cotxes/cotxes2ma/cotxes.html" class="btn btn-secondary mt-3">Tornar al catàleg</a>
+              <a href="/cotxes/cotxes.html" class="btn btn-secondary mt-3">Tornar al catàleg</a>
               <h3 class="my-text-image">${cotxeNou}</h3>
             </div>
           </div>
