@@ -1,10 +1,64 @@
+
 .my-carousel-item {
-    max-height: 50vh;
-    overflow: hidden;
+    height: auto;
+    position: relative;
+    top: 1%;
 }
 
 .my-carousel-image {
-    max-height: 100%;
-    align-self: center;
-    object-fit: contain; 
+
+    height: 100%;
+    object-fit: contain;
+    /* Evita que se recorte */
+    max-height: 50vh;
+    /* Puedes ajustar esta altura según tu diseño */
+}
+
+.my-carousel-text {
+    position: absolute;
+    bottom: 10%;
+}
+
+
+
+/* Extra small: <576px → sin límite de max-width */
+@media (max-width: 575.98px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
+
+/* Small (sm ≥ 576px) */
+@media (min-width: 576px) {
+    .my-alert {
+        margin: 9%;
+    }
+}
+
+/* Medium (md ≥ 768px) */
+@media (min-width: 768px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
+
+/* Large (lg ≥ 992px) */
+@media (min-width: 992px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
+
+/* Extra large (xl ≥ 1200px) */
+@media (min-width: 1200px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
+
+/* Extra extra large (xxl ≥ 1400px) */
+@media (min-width: 1400px) {
+    .my-alert {
+        margin: 5%;
+    }
 }
