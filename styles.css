@@ -80,18 +80,7 @@ header nav ul li a {
     font-weight: bold;
 }
 
-/* Secció d'Informació */
-.about-us {
-    text-align: center;
-    padding: 40px;
-    background-color: #fff;
-    margin: 20px 0;
-}
 
-.about-us p {
-    font-size: 18px;
-    color: #7f8c8d;
-}
 
 /* Peu de pàgina */
 footer {
