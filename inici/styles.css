@@ -3,39 +3,47 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  html, body {
+}
+
+html,
+body {
     width: 100%;
-    overflow-x: hidden; /* evita scroll lateral */
-  }
-  
-  /* El carrusel debe ocupar toda la pantalla sin margen */
-  #carrousel {
+    overflow-x: hidden;
+    /* evita scroll lateral */
+}
+
+/* El carrusel debe ocupar toda la pantalla sin margen */
+#carrousel {
     width: 100vw;
     max-width: 100%;
     margin: 0;
     padding: 0;
-  }
-  
-  .carousel-item,
-  .my-carousel-item {
+}
+
+.my-carousel-inner {
+    height: 90vh;
+}
+
+.carousel-item,
+.my-carousel-item {
     width: 100vw;
     height: 100vh;
     position: relative;
-  }
-  
-  .my-carousel-image {
+}
+
+.my-carousel-image {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-  }
+}
 
-  .my-carousel-text{
+.my-carousel-text {
 
     margin-bottom: 80px;
     font-size: 50px;
-  }
+}
+
+
 
 
 /* Extra small: <576px → sin límite de max-width */
