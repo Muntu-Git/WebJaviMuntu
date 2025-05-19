@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("./navbar.html")
+    fetch("./comu/navbar.html")
       .then(response => response.text())
       .then(data => {
         const container = document.getElementById("navbar-comu");
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('./footer.html')
+    fetch('./comu/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-comu').innerHTML = data;
