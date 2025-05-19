@@ -8,11 +8,11 @@
 
 body {
     background-color: #f4f4f4;
-    color: #333;
+    color: #0a0a0a;
 }
 
 h2 {
-    color: #2c3e50;
+    color: #030303;
 }
 
 /* Capçalera */
@@ -110,7 +110,12 @@ footer {
 }
 
 .my-navbar{
-    background: linear-gradient(#47b4fd, #87c3ff);
+    background: linear-gradient(#000000, #000000);
+}
+
+.container-fluid{
+    color: white;
+    
 }
 
 #suggestions {

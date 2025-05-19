@@ -5,7 +5,7 @@
         "model": "Mustang GT",
         "preu": 45000,
         "descripcio": "Esportiu icònic amb motor V8, perfecte per amants de la potència.",
-        "imatge": "/cotxes/cotxesnous/images/mustang-blanco.jpg",
+        "imatge": "../cotxesnous/images/mustang-blanco.jpg",
         "nou": true
     },
     {
@@ -14,7 +14,7 @@
         "model": "Model S Plaid",
         "preu": 105000,
         "descripcio": "Elèctric de gran rendiment, amb autonomia de fins a 630 km.",
-        "imatge": "/cotxes/cotxesnous/images/tesla.jpg",
+        "imatge": "../cotxesnous/images/tesla.jpg",
         "nou": true
     },
     {
@@ -23,7 +23,7 @@
         "model": "A4 Avant",
         "preu": 35000,
         "descripcio": "Estació familiar de luxe, amb tecnologia d'última generació.",
-        "imatge": "/cotxes/cotxesnous/images/audi-a4-avant.jpg",
+        "imatge": "../cotxesnous/images/audi-a4-avant.jpg",
         "nou": true
     },
     {
@@ -32,7 +32,7 @@
         "model": "X5 xDrive30d",
         "preu": 58000,
         "descripcio": "SUV premium amb gran capacitat off-road i motor dièsel eficient.",
-        "imatge": "/cotxes/cotxesnous/images/bmw-x5.jpg",
+        "imatge": "../cotxesnous/images/bmw-x5.jpg",
         "nou": true
     },
     {
@@ -41,7 +41,7 @@
         "model": "Civic Type R",
         "preu": 39000,
         "descripcio": "Cotoneta esportiva amb motor turboalimentat i disseny agressiu.",
-        "imatge": "/cotxes/cotxesnous/images/honda-civic-typeR.jpg",
+        "imatge": "../cotxesnous/images/honda-civic-typeR.jpg",
         "nou": true
     },
     {
@@ -50,7 +50,7 @@
         "model": "Land Cruiser Prado",
         "preu": 57000,
         "descripcio": "SUV de gran rendiment, ideal per aventurers i rutes tot terreny.",
-        "imatge": "/cotxes/cotxesnous/images/toyota-land-cruiser.jpg",
+        "imatge": "../cotxesnous/images/toyota-land-cruiser.jpg",
         "nou": true
     },
     {
@@ -59,7 +59,7 @@
         "model": "CX-5",
         "preu": 33000,
         "descripcio": "SUV compacte amb disseny elegant i rendiment en carretera.",
-        "imatge": "/cotxes/cotxesnous/images/mazda-CX-5.jpg",
+        "imatge": "../cotxesnous/images/mazda-CX-5.jpg",
         "nou": true
     },
     {
@@ -68,7 +68,7 @@
         "model": "3008",
         "preu": 27000,
         "descripcio": "SUV familiar amb un interior tecnològic i motor eficient.",
-        "imatge": "/cotxes/cotxesnous/images/peugeot-3008.png",
+        "imatge": "../cotxesnous/images/peugeot-3008.png",
         "nou": true
     },
     {
@@ -77,7 +77,7 @@
         "model": "Seltos",
         "preu": 25000,
         "descripcio": "SUV amb bon espai interior, ideal per a famílies i viatges llargs.",
-        "imatge": "/cotxes/cotxesnous/images/kia-seltos.jpg",
+        "imatge": "../cotxesnous/images/kia-seltos.jpg",
         "nou": true
     },
     {
@@ -86,7 +86,7 @@
         "model": "GLC 300",
         "preu": 60000,
         "descripcio": "SUV de luxe amb tecnologia avançada i acabats premium.",
-        "imatge": "/cotxes/cotxesnous/images/mercedes-GLC-300.jpg",
+        "imatge": "../cotxesnous/images/mercedes-GLC-300.jpg",
         "nou": true
     },
     {
@@ -95,7 +95,7 @@
         "model": "Golf 1.6 TDI",
         "preu": 8900,
         "descripcio": "Compacte fiable amb historial de manteniment complet i consum eficient.",
-        "imatge": "/cotxes/cotxes2ma/images/vw-golf.jpg",
+        "imatge": "../cotxes2ma/images/vw-golf.jpg",
         "nou": false
     },
     {
@@ -104,7 +104,7 @@
         "model": "Corsa 1.4",
         "preu": 6900,
         "descripcio": "Cotxe urbà en bon estat, ideal per a nous conductors o trajectes curts.",
-        "imatge": "/cotxes/cotxes2ma/images/opel-corsa.jpg",
+        "imatge": "../cotxes2ma/images/opel-corsa.jpg",
         "nou": false
     },
     {
@@ -113,7 +113,7 @@
         "model": "Mégane dCi 110",
         "preu": 7800,
         "descripcio": "Berlina dièsel amb poc consum i interior espaiós. Revisat recentment.",
-        "imatge": "/cotxes/cotxes2ma/images/renault-megane.jpg",
+        "imatge": "../cotxes2ma/images/renault-megane.jpg",
         "nou": false
     },
     {
@@ -122,7 +122,7 @@
         "model": "Ibiza FR",
         "preu": 8200,
         "descripcio": "Model esportiu amb acabats FR, 5 portes, ben cuidat i revisat.",
-        "imatge": "/cotxes/cotxes2ma/images/seat-ibiza-fr.jpg",
+        "imatge": "../cotxes2ma/images/seat-ibiza-fr.jpg",
         "nou": false
     },
     {
@@ -131,7 +131,7 @@
         "model": "308 SW",
         "preu": 7500,
         "descripcio": "Familiar amb molt espai de maleter i historial de manteniment al dia.",
-        "imatge": "/cotxes/cotxes2ma/images/peugeot-308sw.jpg",
+        "imatge": "../cotxes2ma/images/peugeot-308sw.jpg",
         "nou": false
     },
     {
@@ -140,7 +140,7 @@
         "model": "500 Lounge",
         "preu": 6200,
         "descripcio": "Cotxe petit amb estil retro, perfecte per ciutat i amb baix quilometratge.",
-        "imatge": "/cotxes/cotxes2ma/images/fiat-500.jpg",
+        "imatge": "../cotxes2ma/images/fiat-500.jpg",
         "nou": false
     },
     {
@@ -149,7 +149,7 @@
         "model": "Tucson CRDi",
         "preu": 9800,
         "descripcio": "SUV dièsel en bon estat, amb sensors d'aparcament i navegador.",
-        "imatge": "/cotxes/cotxes2ma/images/hyundai-tucson.jpeg",
+        "imatge": "../cotxes2ma/images/hyundai-tucson.jpeg",
         "nou": false
     },
     {
@@ -158,7 +158,7 @@
         "model": "C4 Picasso",
         "preu": 7900,
         "descripcio": "Monovolum ideal per famílies, seients abatibles i àmplia visibilitat.",
-        "imatge": "/cotxes/cotxes2ma/images/citroen-c4-picasso.jpeg",
+        "imatge": "../cotxes2ma/images/citroen-c4-picasso.jpeg",
         "nou": false
     },
     {
@@ -167,7 +167,7 @@
         "model": "Qashqai dCi",
         "preu": 9200,
         "descripcio": "SUV compacte amb càmera de marxa enrere i bon manteniment.",
-        "imatge": "/cotxes/cotxes2ma/images/nissan-qashqai.jpg",
+        "imatge": "../cotxes2ma/images/nissan-qashqai.jpg",
         "nou": false
     },
     {
@@ -176,7 +176,7 @@
         "model": "Octavia Combi",
         "preu": 9700,
         "descripcio": "Familiar robust amb gran espai interior i motor fiable 2.0 TDI.",
-        "imatge": "/cotxes/cotxes2ma/images/skoda-octavia.jpg",
+        "imatge": "../cotxes2ma/images/skoda-octavia.jpg",
         "nou": false
     }
 ]
