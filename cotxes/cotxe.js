@@ -14,11 +14,6 @@ fetch("/cotxes/cotxes.json")
 
     let cotxeNou = "";
 
-    if(cotxe.nou){
-      cotxeNou = "Nou";
-    } else{
-      cotxeNou = "2a ma"
-    }
 
     if (cotxe) {
       if(cotxe.nou){
@@ -65,7 +60,8 @@ fetch("/cotxes/cotxes.json")
       }
       
     } else {
-      container.innerHTML = "<p>Cotxe no trobat o no és un cotxe de segona mà.</p>";
+      console.log(cotxe);
+    container.innerHTML = "<p>Cotxe no trobat o no és un cotxe de segona mà.</p>";
     }
     
   })
