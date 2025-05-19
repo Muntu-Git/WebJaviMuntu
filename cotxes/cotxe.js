@@ -3,7 +3,7 @@ const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get("id"));
 
 // Carrega els cotxes des del JSON
-fetch("./cotxes.json")
+fetch("/WebJaviMuntu/cotxes/cotxes.json")
   .then(res => res.json())
   .then(cotxes => {
     // Filtrar els cotxes que són nous (nou = true)
@@ -35,7 +35,7 @@ fetch("./cotxes.json")
               <h3 class="car-model">${cotxe.model}</h3>
               <p class="car-preu">${cotxe.preu.toLocaleString()} €</p>
               <p class="car-description">${cotxe.descripcio}</p>
-              <a href="./cotxesnous/cotxes.html" class="btn btn-secondary mt-3">Tornar al catàleg</a>
+              <a href="/WebJaviMuntu/cotxes/cotxesnous/cotxes.html" class="btn btn-secondary mt-3">Tornar al catàleg</a>
               <h3 class="my-text-image">${cotxeNou}</h3>
             </div>
           </div>
@@ -56,7 +56,7 @@ fetch("./cotxes.json")
               <h3 class="car-model">${cotxe.model}</h3>
               <p class="car-preu">${cotxe.preu.toLocaleString()} €</p>
               <p class="car-description">${cotxe.descripcio}</p>
-              <a href="./cotxes2ma/cotxes.html" class="btn btn-secondary mt-3">Tornar al catàleg</a>
+              <a href="/WebJaviMuntu/cotxes/cotxes2ma/cotxes.html" class="btn btn-secondary mt-3">Tornar al catàleg</a>
               <h3 class="my-text-image">${cotxeNou}</h3>
             </div>
           </div>
