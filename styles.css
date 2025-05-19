@@ -88,7 +88,6 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
@@ -99,8 +98,29 @@ footer {
 }
 
 .my-navbar{
-    background: linear-gradient(#47b4fd, #87c3ff);
+    background: linear-gradient(#000000, #000000);
 }
+
+.my-navbar {
+
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  /* Enlaces blancos */
+  .my-navbar .nav-link,
+  .my-navbar .navbar-brand,
+  .my-navbar .dropdown-toggle {
+    color: white !important;
+  }
+  
+  /* Hover en enlaces */
+  .my-navbar .nav-link:hover,
+  .my-navbar .dropdown-toggle:hover {
+    color: #f0f0f0 !important;
+  }
+  
 
 #suggestions {
     max-height: 200px;

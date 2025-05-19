@@ -1,24 +1,41 @@
-
-.my-carousel-item {
-    height: auto;
+/* Elimina márgenes y padding que puedan afectar el ancho */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    overflow-x: hidden; /* evita scroll lateral */
+  }
+  
+  /* El carrusel debe ocupar toda la pantalla sin margen */
+  #carrousel {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carousel-item,
+  .my-carousel-item {
+    width: 100vw;
+    height: 100vh;
     position: relative;
-    top: 1%;
-}
+  }
+  
+  .my-carousel-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
 
-.my-carousel-image {
+  .my-carousel-text{
 
-    height: 100%;
-    object-fit: contain;
-    /* Evita que se recorte */
-    max-height: 50vh;
-    /* Puedes ajustar esta altura según tu diseño */
-}
-
-.my-carousel-text {
-    position: absolute;
-    bottom: 10%;
-}
-
+    margin-bottom: 80px;
+    font-size: 50px;
+  }
 
 
 /* Extra small: <576px → sin límite de max-width */
