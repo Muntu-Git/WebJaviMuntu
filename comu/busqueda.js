@@ -6,7 +6,7 @@
     if (!input || !suggestions) return; // seguridad por si no se ha cargado bien el navbar
   
     // Carregar el JSON de cotxes
-    fetch("/cotxes/cotxes.json")
+    fetch("/WebJaviMuntu/cotxes/cotxes.json")
       .then(res => res.json())
       .then(data => cotxes = data)
       .catch(err => console.error("Error carregant cotxes:", err));
@@ -25,7 +25,7 @@
   
       resultats.forEach(cotxe => {
         const item = document.createElement("a");
-        item.href = `/cotxes/cotxes.html?id=${cotxe.id}`;
+        item.href = `/WebJaviMuntu/cotxes/cotxes.html?id=${cotxe.id}`;
         item.classList.add("list-group-item", "list-group-item-action", "d-flex", "align-items-center");
   
         item.innerHTML = `
