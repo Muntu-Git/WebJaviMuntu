@@ -120,7 +120,7 @@
 
 
     <!-- Secció d'Informació -->
-    <section class="about-us">
+    <section class="seccio1">
 
         <div id="map"
             class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom mapa"
@@ -131,8 +131,8 @@
                         <div class="leaflet-tile-container leaflet-zoom-animated"
                             style="z-index: 18; transform: translate3d(13px, 82px, 0px) scale(autocomplete);"></div>
                         <div class="leaflet-tile-container leaflet-zoom-animated"
-                            style="z-index: 19; transform: translate3d(13px, 82px, 0px) scale(autocomplete);"><img alt=""
-                                src="https://tile.openstreetmap.org/11/1023/680.png"
+                            style="z-index: 19; transform: translate3d(13px, 82px, 0px) scale(autocomplete);"><img
+                                alt="" src="https://tile.openstreetmap.org/11/1023/680.png"
                                 class="leaflet-tile leaflet-tile-loaded"
                                 style="width: 256px; height: 256px; transform: translate3d(22px, -199px, 0px); opacity: 1;"><img
                                 alt="" src="https://tile.openstreetmap.org/11/1024/680.png"
@@ -204,7 +204,29 @@
             </div>
         </div>
         <div class="form">
-            <h1>form</h1>
+            <h1 class="provah1">Formulari</h1>
+
+            <div class="my-div-form">
+                <form action="https://formspree.io/f/mjkwjwrz" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Email
+                            <input type="email" name="email" class="form-control">
+                        </label>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Descripció:
+                            <textarea name="message" class="form-control"></textarea>
+                        </label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Accepto rebre publicitat</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
 
 
         </div>
