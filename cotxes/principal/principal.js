@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("/cotxes/cotxes.json")
+    fetch("../cotxes.json")
       .then(res => res.json())
       .then(cotxes => {
         const container = document.getElementById("llistat-cotxes-nous");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <h5 class="card-title">${cotxe.nom} ${cotxe.model}</h5>
                   <p class="card-text"><strong>Preu:</strong> <span class="text-success">${cotxe.preu.toLocaleString()} €</span></p>
                   <p class="card-text">${cotxe.descripcio.slice(0, 120)}...</p>
-                  <a href="/cotxes/cotxes.html?id=${cotxe.id}" class="btn btn-primary">Veure més</a>
+                  <a href="../cotxes.html?id=${cotxe.id}" class="btn btn-primary">Veure més</a>
                 </div>
               </div>
             </div>
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("DOMContentLoaded", () => {
-    fetch("/cotxes/cotxes.json")
+    fetch("../cotxes.json")
       .then(res => res.json())
       .then(cotxes => {
         const container = document.getElementById("llistat-cotxes-2ma");
@@ -69,7 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
                   <h5 class="card-title">${cotxe.nom} ${cotxe.model}</h5>
                   <p class="card-text"><strong>Preu:</strong> <span class="text-success">${cotxe.preu.toLocaleString()} €</span></p>
                   <p class="card-text">${cotxe.descripcio.slice(0, 120)}...</p>
-                  <a href="/cotxes/cotxes.html?id=${cotxe.id}" class="btn btn-primary">Veure més</a>
+                  <a href="..
+                  /cotxes.html?id=${cotxe.id}" class="btn btn-primary">Veure més</a>
                 </div>
               </div>
             </div>
