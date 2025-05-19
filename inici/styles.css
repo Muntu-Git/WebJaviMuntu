@@ -1,23 +1,33 @@
 
 .my-carousel-item {
-    height: auto;
+    height: 100%;
+    width: 100vh;
     position: relative;
-    top: 1%;
 }
 
 .my-carousel-image {
 
-    height: 100%;
-    object-fit: contain;
+    height: auto;
+    object-fit: cover;
     /* Evita que se recorte */
-    max-height: 50vh;
+    width: 100vh;
     /* Puedes ajustar esta altura según tu diseño */
+    
 }
 
 .my-carousel-text {
     position: absolute;
     bottom: 10%;
+    
 }
+
+.my-carousel-container{
+    width: 100%;
+    height: auto;
+    
+}
+
+
 
 
 
