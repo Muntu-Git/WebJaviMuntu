@@ -13,8 +13,48 @@
 
     <!-- Capçalera -->
 
-    <script src="../comu/comu.js"></script>
-    <div id="navbar-comu"></div>
+    <!-- Barra de navegació -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary my-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img class="logo-navbar" src="../images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item item-navbar">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inici</a>
+                    </li>
+                    <li class="nav-item dropdown item-navbar">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Cotxes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../cotxes/cotxesnous/cotxes.html">Nous</a></li>
+                            <li><a class="dropdown-item" href="../cotxes/cotxes2ma/cotxes.html">Segona mà</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item item-navbar">
+                        <a class="nav-link" href="../sobre-nosaltres/sobre-nosaltres.html">Sobre nosaltres</a>
+                    </li>
+
+                    <li class="nav-item item-navbar">
+                        <a class="nav-link" href="../contacte/contacte.html">Contacte</a>
+                    </li>
+                </ul>
+                <form class="d-flex position-relative" role="search" autocomplete="off">
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Buscar"
+                        aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <div id="suggestions" class="list-group position-absolute w-100" style="top: 100%; z-index: 999;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
 
     <!-- Secció d'Informació -->
     <section class="about-us">
@@ -23,9 +63,9 @@
     </section>
 
 
-    <!-- Peu de Pàgina -->
-    <!-- Peu de Pàgina -->
-    
-    <div id="footer-comu"></div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Concessionari de Cotxes. Tots els drets reservats.</p>
+    </footer>
 
 </body>
