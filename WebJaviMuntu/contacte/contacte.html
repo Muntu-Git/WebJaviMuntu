@@ -55,9 +55,9 @@
                     </li>
                 </ul>
                 <form class="d-flex position-relative" role="search" autocomplete="off">
-                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Buscar"
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Busca el teu cotxe"
                         aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
                     <div id="suggestions" class="list-group position-absolute w-100" style="top: 100%; z-index: 999;">
                     </div>
                 </form>
@@ -120,8 +120,9 @@
 
 
     <!-- Secció d'Informació -->
-    <section class="about-us">
+    <section class="seccio1">
 
+        <!-- Mapa -->
         <div id="map"
             class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom mapa"
             tabindex="0">
@@ -131,8 +132,8 @@
                         <div class="leaflet-tile-container leaflet-zoom-animated"
                             style="z-index: 18; transform: translate3d(13px, 82px, 0px) scale(autocomplete);"></div>
                         <div class="leaflet-tile-container leaflet-zoom-animated"
-                            style="z-index: 19; transform: translate3d(13px, 82px, 0px) scale(autocomplete);"><img alt=""
-                                src="https://tile.openstreetmap.org/11/1023/680.png"
+                            style="z-index: 19; transform: translate3d(13px, 82px, 0px) scale(autocomplete);"><img
+                                alt="" src="https://tile.openstreetmap.org/11/1023/680.png"
                                 class="leaflet-tile leaflet-tile-loaded"
                                 style="width: 256px; height: 256px; transform: translate3d(22px, -199px, 0px); opacity: 1;"><img
                                 alt="" src="https://tile.openstreetmap.org/11/1024/680.png"
@@ -203,11 +204,50 @@
                 </div>
             </div>
         </div>
+
+        <!-- Formulari -->
         <div class="form">
-            <h1>form</h1>
+            <h3>Emplena el formulari i ens posarem en contacte amb tu</h3>
+
+            <div class="my-div-form">
+                <form action="https://formspree.io/f/mjkwjwrz" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Email
+                            <input type="email" name="Email" class="form-control">
+                        </label>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Telèfon
+                            <input type="tel" name="Telèfon" class="form-control">
+                        </label>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Descripció:
+                            <textarea type="message" name="Missatge" class="form-control"></textarea>
+                        </label>
+                    </div>
+                    <!-- Opciones tipo radio -->
+                    <div class="mb-3">
+                        <label class="form-label d-block">Com vols que et contactem?</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Com contactar" id="telfSi" value="Telèfon" checked>
+                            <label class="form-check-label" for="telfSi">Telèfon</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Com contactar" id="emailSi" value="Email">
+                            <label class="form-check-label" for="emailSi">Email</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
 
 
         </div>
+
     </section>
 
     <!-- Script mapa -->

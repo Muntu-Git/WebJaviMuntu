@@ -14,6 +14,11 @@ fetch("/WebJaviMuntu/cotxes/cotxes.json")
 
     let cotxeNou = "";
 
+    if(cotxe.nou){
+      cotxeNou = "Nou";
+    } else{
+      cotxeNou = "2a ma"
+    }
 
     if (cotxe) {
       if(cotxe.nou){
@@ -60,8 +65,7 @@ fetch("/WebJaviMuntu/cotxes/cotxes.json")
       }
       
     } else {
-      console.log(cotxe);
-    container.innerHTML = "<p>Cotxe no trobat o no és un cotxe de segona mà.</p>";
+      container.innerHTML = "<p>Cotxe no trobat o no és un cotxe de segona mà.</p>";
     }
     
   })
