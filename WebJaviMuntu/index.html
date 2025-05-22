@@ -110,6 +110,38 @@
       }
     });
   })();
+
+
+  //Agafar cotxes segons si son "nous" per fer la secció de recomenats
+  document.addEventListener("DOMContentLoaded", () => {
+        fetch("/WebJaviMuntu/cotxes/cotxes.json")
+            .then(res => res.json())
+            .then(data => {
+                const cotxesNoNous = data.filter(cotxe => cotxe.nou == true);
+                const seleccionats = cotxesNoNous.sort(() => 0.5 - Math.random()).slice(0, 3);
+                const contenedor = document.getElementById("recomanats");
+
+                seleccionats.forEach(cotxe => {
+                    const div = document.createElement("div");
+                    div.className = "col-md-4";
+
+                    div.innerHTML = `
+                        <div class="card h-100 shadow-sm">
+                            <img src="${cotxe.imatge}" class="card-img-top" alt="${cotxe.nom} ${cotxe.model}" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">${cotxe.nom} ${cotxe.model}</h5>
+                                <p class="card-text">${cotxe.descripcio || ''}</p>
+                                <p class="card-text"><strong>${cotxe.preu.toLocaleString("ca-ES")} €</strong></p>
+                                <a href="/WebJaviMuntu/cotxes/cotxes.html?id=${cotxe.id}" class="btn btn-primary">Més informació</a>
+                            </div>
+                        </div>
+                    `;
+
+                    contenedor.appendChild(div);
+                });
+            })
+            .catch(err => console.error("Error carregant cotxes recomanats:", err));
+    });
     </script>
 
 
@@ -170,9 +202,60 @@
         </button>
     </div>
 
-    <div class="alert alert-info my-alert">
-        <strong>OFERTA!</strong> 5% de descompte en aquest cotxe només aquesta setmana!
+   
+
+    <div class="container my-5">
+        <h2 class="mb-4">Arribats aquesta setmana</h2>
+        <div id="recomanats" class="row gy-4"></div>
     </div>
+
+    <div class="parallax-section parallax-1">
+        <div class="parallax-text">
+            <h2>Descobreix el teu pròxim cotxe amb nosaltres</h2>
+          </div>
+      </div>
+
+
+      
+      <div class="container my-5">
+        <h2 class="text-center mb-4">Llegeix les nostres valoracions</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Marta Puig</h5>
+                        <p class="card-text">
+                            Estic encantada amb el servei! Em van assessorar molt bé i el cotxe que vaig comprar va superar les meves expectatives. Gràcies per fer-ho tan fàcil!
+                        </p>
+                        <div class="text-warning">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Joan Rovira</h5>
+                        <p class="card-text">
+                            Vaig comprar un cotxe de segona mà i sembla nou! Equip molt professional i transparent. Recomanaria aquest concessionari a tothom.
+                        </p>
+                        <div class="text-warning">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="parallax-section parallax-2">
+        <div class="parallax-text">
+          <h2>Confiança, qualitat i passió pels cotxes</h2>
+        </div>
+      </div>
 
 
     <!-- Footer -->

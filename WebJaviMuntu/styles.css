@@ -126,7 +126,6 @@ footer {
     max-height: 200px;
     overflow-y: auto;
     background-color: white;
-    border: 1px solid #ccc;
     border-top: none;
 }
 

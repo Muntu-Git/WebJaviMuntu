@@ -43,8 +43,40 @@ body {
     font-size: 50px;
 }
 
+.parallax-section {
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  }
+  
+  .parallax-text {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 10px;
+  }
 
+/* Imatges específiques per secció */
+.parallax-1 {
+    background-image: url('../images/fondo.jpg'); /* Canvia per la teva imatge */
+  }
+  
+  .parallax-2 {
+    background-image: url('../images/fondo2.avif'); /* Canvia per la teva segona imatge */
+  }
 
+  .card .text-warning {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
 
 /* Extra small: <576px → sin límite de max-width */
 @media (max-width: 575.98px) {
