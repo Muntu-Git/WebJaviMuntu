@@ -1,0 +1,89 @@
+/* Elimina márgenes y padding que puedan afectar el ancho */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* evita scroll lateral */
+}
+
+/* El carrusel debe ocupar toda la pantalla sin margen */
+#carrousel {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.my-carousel-inner {
+    height: 90vh;
+}
+
+.carousel-item,
+.my-carousel-item {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.my-carousel-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.my-carousel-text {
+
+    margin-bottom: 80px;
+    font-size: 50px;
+}
+
+
+
+
+/* Extra small: <576px → sin límite de max-width */
+@media (max-width: 575.98px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
+
+/* Small (sm ≥ 576px) */
+@media (min-width: 576px) {
+    .my-alert {
+        margin: 9%;
+    }
+}
+
+/* Medium (md ≥ 768px) */
+@media (min-width: 768px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
+
+/* Large (lg ≥ 992px) */
+@media (min-width: 992px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
+
+/* Extra large (xl ≥ 1200px) */
+@media (min-width: 1200px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
+
+/* Extra extra large (xxl ≥ 1400px) */
+@media (min-width: 1400px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
