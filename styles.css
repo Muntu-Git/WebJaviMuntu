@@ -151,7 +151,7 @@ footer {
 }
 
 /* Tablet - entre 768px y 1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 991px) {
     
     .navbar-collapse{
     padding: 10px;

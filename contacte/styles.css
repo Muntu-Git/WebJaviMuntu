@@ -1,41 +1,153 @@
-/* Secció d'Informació */
+/* Secció d'Informació - Estilos base (móvil) */
 .seccio1 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* Cambiado a columna en móvil */
     text-align: center;
-    padding: 40px;
+    padding: 20px; /* Reducido para móvil */
     background-color: #fff;
-    margin: 50px 0;
+    margin: 20px 0 40px 0; /* Margen inferior mayor para separar del footer */
     width: 100%;
-    height: 80vh;
+    min-height: auto; /* Cambiado de height fijo a min-height auto */
 }
 
-.mapa{
+.mapa {
     flex: 1;
     position: relative;
-    margin-right: 20px;
-    border-radius: 10px;  /* Todos los bordes redondeados igualmente */
-    border: 1px solid #00000000;  /* Opcional: para visualizar mejor el borde */
-    box-shadow: 0px 50px 30px rgba(1, 1, 0, 0.5);
-    
+    margin-right: 0; /* Sin margen en móvil */
+    margin-top: 20px; /* Margen superior para separar del form */
+    border-radius: 10px;
+    border: 1px solid #00000000;
+    box-shadow: 0px 20px 15px rgba(1, 1, 0, 0.3); /* Sombra reducida */
+    height: 300px !important; /* Altura fija para móvil - importante para Leaflet */
+    min-height: 300px; /* Altura mínima garantizada */
+    order: 1; /* Esto hace que aparezca segundo en móvil */
 }
 
-.form{
+.form {
     flex: 1;
     background-color: rgb(231, 231, 231);
     position: relative;
-    margin-left: 20px;
-    padding: 30px;
-    border-radius: 10px;  /* Todos los bordes redondeados igualmente */
-    border: 1px solid #00000000;  /* Opcional: para visualizar mejor el borde */
-    box-shadow: 0px 50px 30px rgba(1, 1, 0, 0.5);
+    margin-left: 0; /* Sin margen en móvil */
+    margin-bottom: 20px; /* Margen inferior para separar del mapa */
+    padding: 20px; /* Reducido para móvil */
+    border-radius: 10px;
+    border: 1px solid #00000000;
+    box-shadow: 0px 20px 15px rgba(1, 1, 0, 0.3); /* Sombra reducida */
+    order: -1; /* Esto hace que aparezca primero en móvil */
+    height: 300px; /* Misma altura que el mapa en móvil */
+    overflow-y: auto; /* Scroll si el contenido es muy grande */
 }
 
-.form-check-input{
+.form h3 {
+    font-size: 18px; /* Título más pequeño en móvil */
+    margin-bottom: 20px;
+}
+
+.form-check-input {
     float: none !important;
 }
 
 .about-us p {
-    font-size: 18px;
+    font-size: 16px; /* Reducido para móvil */
     color: #7f8c8d;
+}
+
+/* Tablet - desde 768px hasta 1023px */
+@media (min-width: 768px) {
+    .seccio1 {
+        flex-direction: column; /* Mantener columna en tablet */
+        padding: 30px;
+        margin: 30px 0 50px 0; /* Margen inferior mayor para separar del footer */
+    }
+
+    .mapa {
+        height: 400px !important; /* Mayor altura en tablet - importante para Leaflet */
+        min-height: 400px; /* Altura mínima garantizada */
+        margin-top: 25px; /* Margen superior en tablet */
+        margin-bottom: 0; /* Sin margen inferior */
+        box-shadow: 0px 30px 20px rgba(1, 1, 0, 0.4);
+        order: 1; /* Mantener orden en tablet */
+    }
+
+    .form {
+        padding: 25px;
+        margin-bottom: 25px; /* Mantener margen inferior en tablet */
+        margin-top: 0; /* Sin margen superior */
+        box-shadow: 0px 30px 20px rgba(1, 1, 0, 0.4);
+        order: -1; /* Mantener orden en tablet */
+        height: 400px; /* Misma altura que el mapa en tablet */
+        overflow-y: auto; /* Scroll si el contenido es muy grande */
+    }
+
+    .form h3 {
+        font-size: 20px;
+    }
+
+    .about-us p {
+        font-size: 17px;
+    }
+}
+
+/* Desktop - desde 1024px en adelante */
+@media (min-width: 1024px) {
+    .seccio1 {
+        flex-direction: row; /* Volver a fila en desktop */
+        padding: 40px;
+        margin: 50px 0 60px 0; /* Margen inferior mayor para separar del footer */
+        height: 80vh; /* Recuperar altura original */
+        align-items: stretch; /* Ambos elementos tendrán la misma altura */
+    }
+
+    .mapa {
+        flex: 1;
+        margin-right: 20px; /* Recuperar margen derecho */
+        margin-top: 0; /* Sin margen superior en desktop */
+        height: auto; /* Altura automática */
+        min-height: 400px; /* Altura mínima en desktop */
+        box-shadow: 0px 50px 30px rgba(1, 1, 0, 0.5); /* Sombra original */
+        order: 0; /* Orden normal en desktop (lado a lado) */
+    }
+
+    .form {
+        flex: 1;
+        margin-left: 20px; /* Recuperar margen izquierdo */
+        margin-bottom: 0; /* Sin margen inferior en desktop */
+        padding: 30px; /* Padding original */
+        box-shadow: 0px 50px 30px rgba(1, 1, 0, 0.5); /* Sombra original */
+        order: 0; /* Orden normal en desktop (lado a lado) */
+        height: auto; /* Altura automática en desktop */
+        overflow-y: auto; /* Mantener scroll por si acaso */
+    }
+
+    .form h3 {
+        font-size: 22px; /* Título más grande en desktop */
+    }
+
+    .about-us p {
+        font-size: 18px; /* Tamaño original */
+    }
+}
+
+/* Estilos adicionales para mejorar la experiencia móvil */
+@media (max-width: 767px) {
+    /* Mejorar formulario en móvil */
+    .form-control {
+        font-size: 16px; /* Evitar zoom en iOS */
+        padding: 12px;
+    }
+    
+    .btn {
+        width: 100%; /* Botón a ancho completo en móvil */
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    /* Mejorar radio buttons en móvil */
+    .form-check {
+        margin-bottom: 10px;
+    }
+    
+    .form-check-label {
+        font-size: 16px;
+    }
 }
