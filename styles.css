@@ -120,6 +120,14 @@ footer {
     color: #f0f0f0 !important;
 }
 
+.navbar-collapse{
+    width: 100vh !important;
+    background-color: #0000003c;
+}
+
+.container-fluid{
+    width: 100vh !important;
+}
 
 
 #suggestions {
