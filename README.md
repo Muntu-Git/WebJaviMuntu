@@ -8,3 +8,4 @@ A tenir en compte:
 - A "Contacte" el mapa és interactiu. Hem utilitzat una API de OpenStreetMap
 - El formulari ens envia un correu amb les dades introduïdes. Hem utilitzat una API de Formspree
 - Hem utilitzat Javascript
+- la web és responsive, adaptada a 3 mides: movil, tablet i escriptori
