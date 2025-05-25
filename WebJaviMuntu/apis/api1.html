@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concessionari de Cotxes</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/inici/styles.css">
+    <link rel="stylesheet" href="/proves.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</head>
+
+<body>
+    <!-- Capçalera -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <h1 class="provah1">Mapa</h1>
+
+    <div id="map" style="width: 600px; height: 400px; position: relative;"
+        class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+        tabindex="0">
+        <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-84px, 0px, 0px);">
+            <div class="leaflet-pane leaflet-tile-pane">
+                <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
+                    <div class="leaflet-tile-container leaflet-zoom-animated"
+                        style="z-index: 18; transform: translate3d(13px, 82px, 0px) scale(0.5);"></div>
+                    <div class="leaflet-tile-container leaflet-zoom-animated"
+                        style="z-index: 19; transform: translate3d(13px, 82px, 0px) scale(1);"><img alt=""
+                            src="https://tile.openstreetmap.org/11/1023/680.png"
+                            class="leaflet-tile leaflet-tile-loaded"
+                            style="width: 256px; height: 256px; transform: translate3d(22px, -199px, 0px); opacity: 1;"><img
+                            alt="" src="https://tile.openstreetmap.org/11/1024/680.png"
+                            class="leaflet-tile leaflet-tile-loaded"
+                            style="width: 256px; height: 256px; transform: translate3d(278px, -199px, 0px); opacity: 1;"><img
+                            alt="" src="https://tile.openstreetmap.org/11/1023/681.png"
+                            class="leaflet-tile leaflet-tile-loaded"
+                            style="width: 256px; height: 256px; transform: translate3d(22px, 57px, 0px); opacity: 1;"><img
+                            alt="" src="https://tile.openstreetmap.org/11/1024/681.png"
+                            class="leaflet-tile leaflet-tile-loaded"
+                            style="width: 256px; height: 256px; transform: translate3d(278px, 57px, 0px); opacity: 1;"><img
+                            alt="" src="https://tile.openstreetmap.org/11/1023/682.png"
+                            class="leaflet-tile leaflet-tile-loaded"
+                            style="width: 256px; height: 256px; transform: translate3d(22px, 313px, 0px); opacity: 1;"><img
+                            alt="" src="https://tile.openstreetmap.org/11/1024/682.png"
+                            class="leaflet-tile leaflet-tile-loaded"
+                            style="width: 256px; height: 256px; transform: translate3d(278px, 313px, 0px); opacity: 1;"><img
+                            alt="" src="https://tile.openstreetmap.org/11/1022/681.png"
+                            class="leaflet-tile leaflet-tile-loaded"
+                            style="width: 256px; height: 256px; transform: translate3d(-234px, 57px, 0px); opacity: 1;"><img
+                            alt="" src="https://tile.openstreetmap.org/11/1025/681.png"
+                            class="leaflet-tile leaflet-tile-loaded"
+                            style="width: 256px; height: 256px; transform: translate3d(534px, 57px, 0px); opacity: 1;"><img
+                            alt="" src="https://tile.openstreetmap.org/11/1022/680.png"
+                            class="leaflet-tile leaflet-tile-loaded"
+                            style="width: 256px; height: 256px; transform: translate3d(-234px, -199px, 0px); opacity: 1;"><img
+                            alt="" src="https://tile.openstreetmap.org/11/1025/680.png"
+                            class="leaflet-tile leaflet-tile-loaded"
+                            style="width: 256px; height: 256px; transform: translate3d(534px, -199px, 0px); opacity: 1;"><img
+                            alt="" src="https://tile.openstreetmap.org/11/1022/682.png"
+                            class="leaflet-tile leaflet-tile-loaded"
+                            style="width: 256px; height: 256px; transform: translate3d(-234px, 313px, 0px); opacity: 1;"><img
+                            alt="" src="https://tile.openstreetmap.org/11/1025/682.png"
+                            class="leaflet-tile leaflet-tile-loaded"
+                            style="width: 256px; height: 256px; transform: translate3d(534px, 313px, 0px); opacity: 1;">
+                    </div>
+                </div>
+            </div>
+            <div class="leaflet-pane leaflet-overlay-pane"></div>
+            <div class="leaflet-pane leaflet-shadow-pane"></div>
+            <div class="leaflet-pane leaflet-marker-pane"></div>
+            <div class="leaflet-pane leaflet-tooltip-pane"></div>
+            <div class="leaflet-pane leaflet-popup-pane"></div>
+            <div class="leaflet-proxy leaflet-zoom-animated"
+                style="transform: translate3d(262152px, 174397px, 0px) scale(1024);"></div>
+        </div>
+        <div class="leaflet-control-container">
+            <div class="leaflet-top leaflet-left">
+                <div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in"
+                        href="#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span
+                            aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="#" title="Zoom out"
+                        role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a>
+                </div>
+            </div>
+            <div class="leaflet-top leaflet-right"></div>
+            <div class="leaflet-bottom leaflet-left"></div>
+            <div class="leaflet-bottom leaflet-right">
+                <div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com"
+                        title="A JavaScript library for interactive maps"><svg aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"
+                            class="leaflet-attribution-flag">
+                            <path fill="#4C7BE1" d="M0 0h12v4H0z"></path>
+                            <path fill="#FFD500" d="M0 4h12v3H0z"></path>
+                            <path fill="#E0BC00" d="M0 7h12v1H0z"></path>
+                        </svg> Leaflet</a> <span aria-hidden="true">|</span> © <a
+                        href="http://www.openstreetmap.org/copyright">OpenStreetMap</a></div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+
+        const map = L.map('map').setView([41.97746, 2.82132], 13);
+
+        var marker = L.marker([41.97746, 2.82132]).addTo(map);
+        marker.bindPopup("<b>El nostre concessionari!</b><br>Mola la API del mapa.").openPopup();
+
+
+        var popup = L.popup();
+
+        function onMapClick(e) {
+            popup
+                .setLatLng(e.latlng)
+                .setContent("Has clicat a les coordenades " + e.latlng.toString())
+                .openOn(map);
+        }
+
+        map.on('click', onMapClick);
+
+        var polygon = L.polygon([
+            [41.97999479771445, 2.8183857121485794],
+            [41.98156059193891, 2.8219097938951476],
+            [41.97963345511789, 2.8238136081720295],
+            [41.97156293621546, 2.8216262470879525],
+            [41.97071968866783, 2.8248262753405835],
+            [41.96770799915634, 2.8247857686538413],
+            [41.96620210096595, 2.820775606539374],
+            [41.968310348409204, 2.817008484672352],
+            [41.96755741090288, 2.8134438962390416],
+            [41.96855128653175, 2.8127147758776827],
+            [41.970508874996405, 2.8119856555163234],
+            [41.97240617255973, 2.8129578159981357],
+            [41.97321928278685, 2.81546923057615]
+        ]).addTo(map);
+
+        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+
+    </script>
+
+
+    
+</body>
+
+</html>

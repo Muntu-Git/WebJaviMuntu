@@ -1,0 +1,121 @@
+/* Elimina márgenes y padding que puedan afectar el ancho */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* evita scroll lateral */
+}
+
+/* El carrusel debe ocupar toda la pantalla sin margen */
+#carrousel {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.my-carousel-inner {
+    height: 90vh;
+}
+
+.carousel-item,
+.my-carousel-item {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.my-carousel-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.my-carousel-text {
+
+    margin-bottom: 80px;
+    font-size: 50px;
+}
+
+.parallax-section {
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  }
+  
+  .parallax-text {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
+/* Imatges específiques per secció */
+.parallax-1 {
+    background-image: url('../images/fondo.jpg'); /* Canvia per la teva imatge */
+  }
+  
+  .parallax-2 {
+    background-image: url('../images/fondo2.avif'); /* Canvia per la teva segona imatge */
+  }
+
+  .card .text-warning {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Extra small: <576px → sin límite de max-width */
+@media (max-width: 575.98px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
+
+/* Small (sm ≥ 576px) */
+@media (min-width: 576px) {
+    .my-alert {
+        margin: 9%;
+    }
+}
+
+/* Medium (md ≥ 768px) */
+@media (min-width: 768px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
+
+/* Large (lg ≥ 992px) */
+@media (min-width: 992px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
+
+/* Extra large (xl ≥ 1200px) */
+@media (min-width: 1200px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
+
+/* Extra extra large (xxl ≥ 1400px) */
+@media (min-width: 1400px) {
+    .my-alert {
+        margin: 5%;
+    }
+}
