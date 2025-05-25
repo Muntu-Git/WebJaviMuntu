@@ -7,5 +7,9 @@ A tenir en compte:
 - A sobre nosaltres, a baix de tot, els logos es posen de color al passar el cursor per sobre
 - A "Contacte" el mapa és interactiu. Hem utilitzat una API de OpenStreetMap
 - El formulari ens envia un correu amb les dades introduïdes. Hem utilitzat una API de Formspree
+
+General
 - Hem utilitzat Javascript
-- la web és responsive, adaptada a 3 mides: movil, tablet i escriptori
+- La web és responsive, adaptada a 3 mides: movil, tablet i escriptori
+- Hem introduit microdata
+- Hem utilitzat bootstrap
