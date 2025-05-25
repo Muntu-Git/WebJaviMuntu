@@ -7,3 +7,4 @@ A tenir en compte:
 - A sobre nosaltres, a baix de tot, els logos es posen de color al passar el cursor per sobre
 - A "Contacte" el mapa és interactiu. Hem utilitzat una API de OpenStreetMap
 - El formulari ens envia un correu amb les dades introduïdes. Hem utilitzat una API de Formspree
+- Hem utilitzat Javascript
