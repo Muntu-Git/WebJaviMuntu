@@ -116,6 +116,7 @@
         box-shadow: 0px 50px 30px rgba(1, 1, 0, 0.5); /* Sombra original */
         order: 0; /* Orden normal en desktop (lado a lado) */
         height: auto; /* Altura automática en desktop */
+        min-height: 400px;
         overflow-y: auto; /* Mantener scroll por si acaso */
     }
 
