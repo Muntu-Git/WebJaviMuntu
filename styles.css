@@ -120,14 +120,9 @@ footer {
     color: #f0f0f0 !important;
 }
 
-.navbar-collapse{
-    width: 100vh !important;
-    background-color: #0000003c;
-}
 
-.container-fluid{
-    width: 100vh !important;
-}
+
+
 
 
 #suggestions {
@@ -145,4 +140,26 @@ footer {
 
 #suggestions a:hover {
     background-color: #f8f9fa;
+}
+
+/* Móvil - hasta 767px */
+@media (max-width: 767px) {
+    .navbar-collapse{
+    padding: 10px;
+    background-color: #000000d0;
+    }
+}
+
+/* Tablet - entre 768px y 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    .navbar-collapse{
+    padding: 10px;
+    background-color: #000000d0;
+    }
+}
+
+/* Desktop - desde 1024px */
+@media (min-width: 1024px) {
+    
 }
